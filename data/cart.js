@@ -10,7 +10,7 @@ export let cart = [{
 export function addToCart(productId) {
       let matchingItem;
         cart.forEach((cartitem)=>{
-            if(item.productId === productId){
+            if(cartitem.productId === productId){
               matchingItem = cartitem;
             }
              });
@@ -33,5 +33,5 @@ export function addToCart(productId) {
     }
     });
 
-    cart = newCart;
+     cart = newCart;
  }
