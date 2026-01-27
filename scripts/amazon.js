@@ -76,15 +76,24 @@ import { formatCurrency } from './utils/money.js';
         });
          } 
  }
-   function updateCartQuantity(){
-        let cartQuantity = 0 ;
+ function updateCartQuantity() {
+  let cartQuantity = 0;
+  cart.forEach(item => cartQuantity += item.quantity);
 
-                cart.forEach((cartitem) =>{
-                    cartQuantity += cartitem.quantity ;
-                });
+  document.querySelector('.js-cart-quantity').textContent = cartQuantity;
+}
+
+// Call it once on page load
+updateCartQuantity();
+//    function updateCartQuantity(){
+//         let cartQuantity = 0 ;
+
+//                 cart.forEach((cartitem) =>{
+//                     cartQuantity += cartitem.quantity ;
+//                 });
             
-                document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-        }
+//                 document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+//         }
             
    document.querySelectorAll('.js-add-to-cart')
    .forEach((button) =>{
