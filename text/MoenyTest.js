@@ -1,5 +1,6 @@
 import {formatCurrency} from "../scripts/utils/money.js";
-console.log('test suite : formateCurrency');
+
+console.log('test suite : formatCurrency');
 console.log('convert cernts Into Dollars');
 
 if(formatCurrency(2095) === '20.95'){

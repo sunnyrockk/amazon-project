@@ -1,6 +1,9 @@
-// export let cart = JSON.parse(localStorage.getItem('cart'));
-export let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+export let cart ;
+loadFromStorage();
+
+export function loadFromStorage(){
+cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 if (!cart.length) {
   cart = [
@@ -13,6 +16,8 @@ if (!cart.length) {
       DeliveryOptionId : '2'
     }
   ];
+}
+
 }
 
 
